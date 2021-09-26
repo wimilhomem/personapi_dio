@@ -4,40 +4,42 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.validator.constraints.br.CPF;
-
-import javax.validation.Valid;
+import one.digitalinnovation.personapi.enums.AddressType;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
-import java.util.List;
+
 
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class PersonDTO {
+public class AddressDTO {
 
     private Long id;
 
     @NotEmpty
     @Size(min = 2, max = 100)
-    private String firstName;
+    private String city;
 
     @NotEmpty
     @Size(min = 2, max = 100)
-    private String lastName;
+    private String country;
 
     @NotEmpty
-    @CPF
-    private String cpf;
+    private String postCode;
 
-    private String birthDate;
-
-    @Valid
     @NotEmpty
-    private List<PhoneDTO> phones;
+    private String streetName;
 
-    @Valid
     @NotEmpty
-    private List<AddressDTO> addresses;
+    @Size(min = 2, max = 10)
+    private String streetNumber;
+
+    @Enumerated(EnumType.STRING)
+    private AddressType type;
+
+
+
 }
