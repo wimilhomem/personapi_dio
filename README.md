@@ -19,6 +19,11 @@ Url de produção no Heroku:
 ```
 https://wdev-personapi.herokuapp.com/api/v1/people/
 ```
+Documentação da API no Swagger:
+
+```
+https://wdev-personapi.herokuapp.com/swagger-ui.html
+```
 
 
 STACK:
@@ -29,6 +34,7 @@ STACK:
 * Intellj IDEA Community Edition.
 * Controle de versão GIT.
 * Heroku (deploy).
+* Swagger (apidoc).
 * PostgreSql.
 
 

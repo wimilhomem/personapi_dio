@@ -1,5 +1,6 @@
 package one.digitalinnovation.personapi.dto.request;
 
+import io.swagger.annotations.ApiModel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -15,6 +16,7 @@ import javax.validation.constraints.Size;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@ApiModel("Address")
 public class AddressDTO {
 
     private Long id;
